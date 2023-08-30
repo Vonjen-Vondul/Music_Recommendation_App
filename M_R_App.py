@@ -1,5 +1,5 @@
 import streamlit
-import spotipy
+import spotipy from spotipy.oauth2 import SpotifyClientCredentials
 from PIL import Image
 import os
 from spotipy.oauth2 import SpotifyClientCredentials
