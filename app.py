@@ -16,9 +16,6 @@ from collections import defaultdict
 from scipy.spatial.distance import cdist
 import time
 
-# Set your Spotify API credentials as environment variables
-os.environ["SPOTIFY_CLIENT_ID"] = "548749938ac442e280dba75dd75aa99e"
-os.environ["SPOTIFY_CLIENT_SECRET"] = "55b719fefe3c4db9b1c56dc34cfb3926"
 
 # Create the Spotify API client
 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=os.environ.get("SPOTIFY_CLIENT_ID"),
