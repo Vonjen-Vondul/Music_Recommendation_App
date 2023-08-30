@@ -16,15 +16,12 @@ from scipy.spatial.distance import cdist
 import time
 
 
-# Create the Spotify API client
-sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=os.environ.get("SPOTIFY_CLIENT_ID"),
-                                                           client_secret=os.environ.get("SPOTIFY_CLIENT_SECRET")))
-# cid = st.secrets['client_id']
-# secret = st.secrets['client_secret']
-# client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secret=secret)
-# sp = spotipy.Spotify(client_credentials_manager
-# =
-# client_credentials_manager)
+cid = st.secrets['SPOTIFY_CLIENT_ID']
+secret = st.secrets['SPOTIFY_CLIENT_SECRET']
+client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secret=secret)
+sp = spotipy.Spotify(client_credentials_manager
+=
+client_credentials_manager)
 
 data = pd.read_csv("Spotify_Data/data.csv")
 genre_data = pd.read_csv('Spotify_Data/data_by_genres.csv')
