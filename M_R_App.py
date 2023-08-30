@@ -1,4 +1,3 @@
-import streamlit
 from spotipy.oauth2 import SpotifyClientCredentials
 from PIL import Image
 import os
